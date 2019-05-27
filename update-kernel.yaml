@@ -1,6 +1,6 @@
 ---
 - name: patching kernel
-  hosts: "{{hostname}}"
+  hosts: "{{34.242.195.106}}"
   become: yes
   become_method: sudo
   tasks:
