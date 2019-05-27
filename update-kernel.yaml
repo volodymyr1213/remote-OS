@@ -1,7 +1,17 @@
+
 ---
 - name: Patching kernel
-    hosts: all
-    become: yes
-    become_method: sudo
-    tasks:
+  hosts: all
+  become: yes
+  become_method: sudo
+  tasks:
+
+    - name: Confirm kernel version
+      # vars:
+      #   kernel_version: "{{kernel}}"
+      #   register: current_kernel
+      # - debug: msg="{{ current_kernel.kernel }}"
+      shell: uname -a
+      register: kernel_version
+    - debug: var=kernel_version.stdout
 
