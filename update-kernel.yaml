@@ -1,4 +1,3 @@
-
 ---
 - name: Patching kernel
   hosts: all
