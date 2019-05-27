@@ -1,6 +1,6 @@
 ---
-- name: patching kernel
-  hosts: 34.242.195.106
+- name: Patching kernel
+  hosts: all
   become: yes
   become_method: sudo
   tasks:
@@ -11,8 +11,6 @@
       #   register: current_kernel
       # - debug: msg="{{ current_kernel.kernel }}"
       shell: uname -a
-      register: kernel_version
-    - debug: var=kernel_version.stdout
 
 
     # - name: install epel-release
